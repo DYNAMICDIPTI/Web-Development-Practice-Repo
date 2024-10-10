@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Engine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .search-form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="search-form">
+    <h2>Search</h2>
+    <form id="search-form">
+      <input type="search" id="search-input" placeholder="Search...">
+      <button type="submit">Search</button>
+    </form>
+    <div id="search-results">
+      <!-- search results will be displayed here -->
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('search-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const query = document.getElementById('search-input').value;
+      const resultsDiv = document.getElementById('search-results');
+      resultsDiv.innerHTML = `<p>Results for "${query}":</p>`;
+      // Mock search results
+      const results = ['Result 1', 'Result 2', 'Result 3'];
+      results.forEach(result => {
+        resultsDiv.innerHTML += `<p>${result}</p>`;
+      });
+    });
+  </script>
+</body>
+</html>
