@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #logo {
+            margin-bottom: 20px;
+        }
+        #search-box {
+            width: 400px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        #search-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4285f4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #search-button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <h1>Google</h1>
+    </div>
+    <input type="text" id="search-box" placeholder="Search Google or type a URL">
+    <button id="search-button" onclick="alert('This is a mock search!')">Google Search</button>
+</body>
+</html>
