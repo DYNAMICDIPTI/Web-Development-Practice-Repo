@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year and ASCII Value Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Leap Year Checker</h1>
+<label for="year">Enter a Year:</label>
+<input type="number" id="year" placeholder="e.g. 2024">
+<button onclick="checkLeapYear()">Check Leap Year</button>
+
+<div class="result" id="leapYearResult"></div>
+
+<h1>ASCII Value Checker</h1>
+<label for="char">Enter a Character:</label>
+<input type="text" id="char" maxlength="1" placeholder="e.g. A">
+<button onclick="checkAsciiValue()">Check ASCII Value</button>
+
+<div class="result" id="asciiValueResult"></div>
+
+<script>
+    function checkLeapYear() {
+        const year = parseInt(document.getElementById('year').value);
+        let result = '';
+
+        if (isNaN(year)) {
+            result = 'Please enter a valid year.';
+        } else {
+            // Leap year calculation
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                result = year + ' is a leap year.';
+            } else {
+                result = year + ' is not a leap year.';
+            }
+        }
+
+        document.getElementById('leapYearResult').innerText = result;
+    }
+
+    function checkAsciiValue() {
+        const char = document.getElementById('char').value;
+        let result = '';
+
+        if (char.length !== 1) {
+            result = 'Please enter a single character.';
+        } else {
+            const asciiValue = char.charCodeAt(0);
+            result = 'The ASCII value of "' + char + '" is ' + asciiValue + '.';
+        }
+
+        document.getElementById('asciiValueResult').innerText = result;
+    }
+</script>
+
+</body>
+</html>
