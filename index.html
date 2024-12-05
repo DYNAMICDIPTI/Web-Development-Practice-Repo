@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Filters</title>
-    <style> 
-        /* img{
-            filter: blur(10px);
-        } */
-
-        .img1{
-            filter: brightness(122%);
+    <title>Document</title>
+    <style>
+        .box {
+            height: 121px;
+            width: 121px;
+            background-color: red;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;   
+            animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
         }
 
-        .img2{}
-
-        .img3{
-            filter: grayscale(20%);
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
         }
-       
+
+        @keyframes animateX {
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+
+        @keyframes animateY {
+           from{
+                bottom: 0;
+            }
+            to{
+                bottom: 100% ;
+            }
+        }
+ 
     </style>
 </head>
+
 <body>
-    <div class="container"> 
-        <img class="img1" src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg" alt="">
-        <img class="img2" src="https://c.ndtvimg.com/2023-09/154fgjlg_shah-rukh-khan-_625x300_23_September_23.jpg" alt="">
-        <img class="img3" src="https://images.hindustantimes.com/img/2022/11/12/550x309/akshay_kumar_1659860706633_1668255913307_1668255913307.jpg" alt="">
+    <div class="container">
+
+        <div class="box">
+        </div>
     </div>
+    <!-- 
+   
+     -->
 </body>
+
 </html>
