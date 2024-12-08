@@ -4,73 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Flexbox</title>
+    <title>CSS MultiColor Website</title>
     <style>
-        .container {
-            border: 2px solid red;
-            display: flex;
-            height: 80vh;
-            /* justify-content: center; */
-            align-items: center;
-            /* flex-direction: column; */
-            flex-wrap: wrap;
-            /* align-content: flex-start; */
-            /* there is no justify-items  in flexbox; */
-            flex-flow: row wrap;
-            /* gap: 30px; 
-            row-gap: 40px;
-            column-gap: 10px; */
-            gap: 40px 10px;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    <style>
 
+        /* :root{
+            --primary-color: #ad5afacc;
+            --text-color: white;
+            --secondary-color: #e3cff5cc;
+        } */
+
+        :root{
+            --primary-color: #061872cc;
+            --text-color: white;
+            --secondary-color: #6ea5fccc;
         }
-
-        .item {  
-            /* flex-grow: 1; */
-            height: 92px;
-            width: 92px;
-            border: 2px solid black;
-            /* margin: 4px; */
-            background-color: blueviolet;
+        
+        body{
+            background-color: var(--secondary-color);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .order-1{
-            order: 1;
-        }
-        .order-2{
-            order: 2;
-        }
-        .order-3{
-            order: 3;
+        nav {
+            background-color: var(--primary-color);
+            padding: 12px 0;
         }
 
-        .item1{  
-            /* flex-grow: 2; */
-            /* flex-shrink: 2; */
-            align-self: flex-end;
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 23px;
+            font-weight: bolder;
+            
+        }
+
+        ul li a{
+            color: var(--text-color);
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
-
-    <main>
-        <div class="container">
-            <div class="item item1">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item order-1">4</div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            
-         
-        </div>
-    </main>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>
