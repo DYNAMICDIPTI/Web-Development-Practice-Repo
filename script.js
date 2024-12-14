@@ -1,24 +1,11 @@
-const output = document.getElementById('output');
-const input = document.getElementById('input');
+const wrapper = document.querySelector('.wrapper')
+const registerLink = document.querySelector('.register-link')
+const loginLink = document.querySelector('.login-link')
 
-const commands = {
-    help: "Available commands: help, hack, exit",
-    hack: "Hacking in progress... Please wait...",
-    exit: "Exiting the terminal. Goodbye!"
-};
+registerLink.onclick = () => {
+    wrapper.classList.add('active')
+}
 
-input.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        const command = input.value.trim();
-        input.value = '';
-        output.innerHTML += `> ${command}\n`;
-
-        if (commands[command]) {
-            output.innerHTML += commands[command] + '\n';
-        } else {
-            output.innerHTML += "Unknown command. Type 'help' for a list of commands.\n";
-        }
-
-        output.scrollTop = output.scrollHeight; // Auto scroll to bottom
-    }
-});
+loginLink.onclick = () => {
+    wrapper.classList.remove('active')
+}
