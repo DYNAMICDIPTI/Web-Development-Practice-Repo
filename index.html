@@ -3,34 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=n, initial-scale=1.0">
+    <title>css selectors </title>
     <style>
-         p{
-            background-color: blue;
-            color: white; 
-        }
+        /* .box:first-child {
+            background-color: brown;
+        } */
 
-        div p:first-child{ 
-            background-color: yellow;
-            color: red;
+        /* .box:first-line {
+            background-color: blue;
+        } */
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+        p, a, .box,[data-color="primary"]{
+            margin-top: 49px;
+            padding-top: 47px;
+        } */
+         /* .box:nth-child(odd){
+            background-color: blueviolet;
+         } */
+          /* .box:nth-last-child(1){
+            background-color: darkblue;
+          } */
+        .boxes::before{
+            content: "i am a don";
+            color: blueviolet;
+        }  
+        .boxes::after{
+            content: "i am a dom";
+            color: chartreuse;
         } 
-    </style>
+        ::selection{
+            background-color: darkgreen;
+            color: blueviolet;
+        }
+        .box::first-letter{
+            color: darkmagenta;
+            font-size: 90px;
+        }
+        input::placeholder{
+            color: deeppink;
+            font-size: 54px;
+        }
+</style>
 </head>
 
 <body>
-    <!-- Write html and css code to style a paragraph inside a div which contains 5 other paragraphs. The first paragraph must have background color yellow and text color red. The other paragraphs must have background color blue and text color white. The HMTL is written below for your reference. Do not change this html -->
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo consectetur dicta fuga ea at
-            vitae suscipit, repellendus illum deleniti laboriosam ipsa distinctio.</p>
-        <p>I am another para</p>
-        <p>I am also another para</p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita explicabo consectetur dicta fuga ea at
-            vitae suscipit, repellendus illum deleniti laboriosam ipsa distinctio.</p>
-        <p>I am another para</p>
-        <p>I am also another para</p>
+    <div class="boxes">
+        <div  data-color="primary" class="box"> i am in div class and i am writing an eassy.</div>
+        <div class="box"> hey i am in a box</div>
+        <div class="box"> hey i am in a box</div>
+        <input type="text" placeholder="type your name here">
     </div>
 </body>
 
