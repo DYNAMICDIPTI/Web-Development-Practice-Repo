@@ -3,33 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=div, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css varialbles</title>
     <style>
-        .box {
-            border: solid black;
-            padding: 34px;
-            box-shadow: 20px 20px 12px 1px #3804c6;
+        :root{
+            --color:blue;
+            --seccolor:red;
+            --defpad: 23px;
+            --defop: 0.2;
         }
+        *{
+          margin: 0;
+          padding: 0;  
+        }
+        ul{
+            display: flex;
 
-        .text-element {
-            text-shadow: 6px 13px 4px #888888;
-            outline: 11px solid;
-            border: 10px solid green;
-            outline-offset: 2px;
+        }
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: 34px;
+        }
+        .nav{
+            background-color:var(--color);
+        }
+        div:first-child{
+            background-color: blueviolet;
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+        ul li:first-child{
+            background-color: blue;
+            padding: 34px;
+            border: 2px solid var(--seccolor) ;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
-        i am in box
+    <div>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
     </div>
-    <p class="text-element">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam fugiat minima autem eos error ut commodi
-        quaerat inventore harum praesentium ratione iste molestias obcaecati unde aliquam sunt, sapiente animi rerum.
-        Porro quasi maxime, labore fuga reiciendis deleniti voluptates? Earum est aliquam aut! Architecto.
-    </p>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolores hic quis placeat culpa, velit labore
+        perspiciatis optio, debitis illo quam voluptate cupiditate quisquam totam. Nulla officiis a accusamus inventore
+        suscipit. Perferendis sed expedita illum! Laudantium, ratione. Sint ab quidem consectetur expedita corporis,
+        facilis perspiciatis!
+    </div>
 </body>
 
 </html>
